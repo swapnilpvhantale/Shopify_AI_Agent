@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Order Confirmation</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="confirmation" id="confirmation">
+    <p class="checkmark">&#10003;</p>
+    <h1>Loading your order...</h1>
+  </div>
+
+  <script type="module">
+    const params = new URLSearchParams(window.location.search);
+    const productId = Number.parseInt(params.get('id'), 10);
+    const container = document.getElementById('confirmation');
+
+    try {
+      const res = await fetch('products.json');
+      const products = await res.json();
+      const product = products.find(p => p.id === productId);
+
+      if (!product) {
+        container.innerHTML = '<p class="empty">Order not found.</p>';
+      } else {
+        container.innerHTML = `
+          <p class="checkmark">&#10003;</p>
+          <h1>Thank you! Your order has been placed.</h1>
+          <img src="${product.image}" alt="${product.name}" />
+          <p>${product.name}</p>
+          <p class="price">$${product.price.toFixed(2)}</p>
+          <div class="links">
+            <a class="btn btn-primary" href="index.html">Continue Shopping</a>
+            <a class="btn btn-secondary" href="orders.html">View My Orders</a>
+          </div>
+        `;
+      }
+    } catch (err) {
+      container.innerHTML = '<p class="empty">Failed to load order details.</p>';
+      console.error(err);
+    }
+  </script>
+</body>
+</html>
