@@ -1,0 +1,652 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Bluetooth Headphones",
+    "image": "https://picsum.photos/seed/product-1/300/300",
+    "price": 59.99,
+    "description": "Over-ear Bluetooth headphones with rich bass and a comfortable, cushioned fit for all-day listening.",
+    "details": [
+      "Bluetooth 5.0 wireless connectivity",
+      "Up to 20 hours battery life",
+      "Built-in microphone for calls",
+      "Foldable design with carry pouch"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Smartphone 128GB",
+    "image": "https://picsum.photos/seed/product-2/300/300",
+    "price": 499,
+    "description": "A fast and reliable smartphone with 128GB of storage, a sharp display, and an all-day battery.",
+    "details": [
+      "6.5-inch full HD display",
+      "128GB internal storage",
+      "48MP dual rear camera",
+      "5000mAh battery with fast charging"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "4K Ultra HD Smart TV",
+    "image": "https://picsum.photos/seed/product-3/300/300",
+    "price": 799.99,
+    "description": "Bring the cinema home with stunning 4K resolution, vivid color, and built-in smart streaming apps.",
+    "details": [
+      "55-inch 4K Ultra HD display",
+      "HDR10 support",
+      "Built-in Wi-Fi and streaming apps",
+      "3x HDMI, 2x USB ports"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Laptop 15.6 inch",
+    "image": "https://picsum.photos/seed/product-4/300/300",
+    "price": 899.5,
+    "description": "A powerful 15.6-inch laptop built for productivity, multitasking, and everyday computing.",
+    "details": [
+      "15.6-inch Full HD display",
+      "16GB RAM, 512GB SSD",
+      "Backlit keyboard",
+      "Up to 10 hours battery life"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Smartwatch Series 5",
+    "image": "https://picsum.photos/seed/product-5/300/300",
+    "price": 199.99,
+    "description": "Track your fitness and stay connected on the go with this feature-packed smartwatch.",
+    "details": [
+      "Heart rate and SpO2 monitoring",
+      "GPS tracking",
+      "5 ATM water resistance",
+      "Up to 2 days battery life"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Portable Bluetooth Speaker",
+    "image": "https://picsum.photos/seed/product-6/300/300",
+    "price": 39.99,
+    "description": "Compact and rugged Bluetooth speaker delivering powerful sound wherever you go.",
+    "details": [
+      "360-degree stereo sound",
+      "IPX7 waterproof rating",
+      "12-hour playtime",
+      "Built-in speakerphone"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Wireless Charging Pad",
+    "image": "https://picsum.photos/seed/product-7/300/300",
+    "price": 24.99,
+    "description": "Effortlessly charge your Qi-enabled devices with this sleek, fast wireless charging pad.",
+    "details": [
+      "10W fast wireless charging",
+      "Compatible with Qi-enabled devices",
+      "LED charging indicator",
+      "Non-slip surface"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Noise Cancelling Earbuds",
+    "image": "https://picsum.photos/seed/product-8/300/300",
+    "price": 129.99,
+    "description": "True wireless earbuds with active noise cancellation for immersive, distraction-free audio.",
+    "details": [
+      "Active noise cancellation",
+      "Up to 6 hours playtime (24 with case)",
+      "Touch controls",
+      "IPX4 sweat resistance"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Gaming Mouse",
+    "image": "https://picsum.photos/seed/product-9/300/300",
+    "price": 45.99,
+    "description": "Precision gaming mouse with adjustable DPI and customizable RGB lighting for competitive play.",
+    "details": [
+      "Up to 12,000 DPI optical sensor",
+      "6 programmable buttons",
+      "RGB backlighting",
+      "Ergonomic design"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Mechanical Keyboard",
+    "image": "https://picsum.photos/seed/product-10/300/300",
+    "price": 89.99,
+    "description": "Responsive mechanical keyboard with tactile switches built for gaming and fast typing.",
+    "details": [
+      "Mechanical blue switches",
+      "RGB backlighting",
+      "Anti-ghosting keys",
+      "Durable aluminum frame"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "27-inch 4K Monitor",
+    "image": "https://picsum.photos/seed/product-11/300/300",
+    "price": 349.99,
+    "description": "Enjoy crisp visuals and vibrant color accuracy on this 27-inch 4K UHD monitor.",
+    "details": [
+      "27-inch 4K UHD IPS panel",
+      "HDR support",
+      "USB-C and HDMI inputs",
+      "Adjustable stand"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "External SSD 1TB",
+    "image": "https://picsum.photos/seed/product-12/300/300",
+    "price": 109.99,
+    "description": "Ultra-fast portable SSD with 1TB of storage for quick file transfers on the go.",
+    "details": [
+      "1TB storage capacity",
+      "Read speeds up to 1050MB/s",
+      "USB 3.2 Gen 2 interface",
+      "Compact, shock-resistant design"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "USB-C Hub",
+    "image": "https://picsum.photos/seed/product-13/300/300",
+    "price": 29.99,
+    "description": "Expand your laptop's connectivity with this compact multi-port USB-C hub.",
+    "details": [
+      "HDMI 4K output",
+      "2x USB 3.0 ports",
+      "SD/microSD card reader",
+      "100W USB-C power delivery passthrough"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Action Camera 4K",
+    "image": "https://picsum.photos/seed/product-14/300/300",
+    "price": 199,
+    "description": "Capture your adventures in stunning 4K with this rugged, waterproof action camera.",
+    "details": [
+      "4K30fps video recording",
+      "Waterproof up to 30m (with case)",
+      "Built-in image stabilization",
+      "Wi-Fi and app connectivity"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Drone with Camera",
+    "image": "https://picsum.photos/seed/product-15/300/300",
+    "price": 349,
+    "description": "Fly high and capture aerial footage with this camera drone featuring GPS-assisted flight.",
+    "details": [
+      "2.7K camera with gimbal stabilization",
+      "GPS return-to-home",
+      "Up to 25 minutes flight time",
+      "Foldable design"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Tablet 10.1 inch",
+    "image": "https://picsum.photos/seed/product-16/300/300",
+    "price": 279.99,
+    "description": "A versatile 10.1-inch tablet perfect for streaming, browsing, and everyday productivity.",
+    "details": [
+      "10.1-inch Full HD display",
+      "64GB storage, expandable",
+      "Front and rear cameras",
+      "Up to 10 hours battery life"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "E-Reader",
+    "image": "https://picsum.photos/seed/product-17/300/300",
+    "price": 129,
+    "description": "Glare-free e-reader with a paper-like display, perfect for reading anywhere, day or night.",
+    "details": [
+      "6-inch glare-free display",
+      "Adjustable warm front light",
+      "Weeks of battery life",
+      "Waterproof design"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Home Theater Soundbar",
+    "image": "https://picsum.photos/seed/product-18/300/300",
+    "price": 249.99,
+    "description": "Upgrade your TV audio with immersive surround sound from this sleek soundbar system.",
+    "details": [
+      "2.1 channel with wireless subwoofer",
+      "Bluetooth and HDMI ARC connectivity",
+      "Multiple sound modes",
+      "Compact wall-mountable design"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Wireless Router",
+    "image": "https://picsum.photos/seed/product-19/300/300",
+    "price": 79.99,
+    "description": "High-speed dual-band router delivering reliable Wi-Fi coverage throughout your home.",
+    "details": [
+      "Dual-band AC1200 Wi-Fi",
+      "4 Gigabit LAN ports",
+      "Parental controls",
+      "Easy app-based setup"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Smart Home Hub",
+    "image": "https://picsum.photos/seed/product-20/300/300",
+    "price": 59,
+    "description": "Control all your smart devices from one central hub with voice and app integration.",
+    "details": [
+      "Works with Zigbee and Wi-Fi devices",
+      "Voice assistant compatible",
+      "Automation and scheduling",
+      "Compact plug-in design"
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Robot Vacuum Cleaner",
+    "image": "https://picsum.photos/seed/product-21/300/300",
+    "price": 299.99,
+    "description": "Keep your floors spotless automatically with this smart robot vacuum and app control.",
+    "details": [
+      "Smart mapping navigation",
+      "App and voice control",
+      "Automatic charging dock",
+      "Up to 120 minutes runtime"
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Portable Power Bank 20000mAh",
+    "image": "https://picsum.photos/seed/product-22/300/300",
+    "price": 34.99,
+    "description": "High-capacity power bank to keep your phone and gadgets charged all day long.",
+    "details": [
+      "20000mAh capacity",
+      "Dual USB output ports",
+      "Fast charging support",
+      "LED battery indicator"
+    ]
+  },
+  {
+    "id": 23,
+    "name": "VR Headset",
+    "image": "https://picsum.photos/seed/product-23/300/300",
+    "price": 399,
+    "description": "Immerse yourself in virtual worlds with this high-resolution, comfortable VR headset.",
+    "details": [
+      "High-resolution dual displays",
+      "Wide field of view",
+      "Built-in motion tracking",
+      "Adjustable, cushioned headband"
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Digital SLR Camera",
+    "image": "https://picsum.photos/seed/product-24/300/300",
+    "price": 649,
+    "description": "Capture professional-quality photos with this feature-rich digital SLR camera.",
+    "details": [
+      "24MP APS-C sensor",
+      "Interchangeable lens mount",
+      "Full HD video recording",
+      "Optical viewfinder"
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Mirrorless Camera",
+    "image": "https://picsum.photos/seed/product-25/300/300",
+    "price": 749,
+    "description": "Compact and lightweight mirrorless camera with pro-level image quality.",
+    "details": [
+      "24MP full-frame sensor",
+      "4K video recording",
+      "In-body image stabilization",
+      "Wi-Fi and Bluetooth connectivity"
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Bluetooth Car Adapter",
+    "image": "https://picsum.photos/seed/product-26/300/300",
+    "price": 19.99,
+    "description": "Add wireless audio streaming and hands-free calling to any car with this compact adapter.",
+    "details": [
+      "Bluetooth 5.0 audio streaming",
+      "Hands-free calling",
+      "USB charging port",
+      "Plugs into car's aux or 12V outlet"
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Smart Doorbell Camera",
+    "image": "https://picsum.photos/seed/product-27/300/300",
+    "price": 129.99,
+    "description": "Monitor your front door remotely with HD video, motion alerts, and two-way audio.",
+    "details": [
+      "1080p HD video",
+      "Motion detection alerts",
+      "Two-way audio",
+      "Night vision"
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Wireless Gaming Controller",
+    "image": "https://picsum.photos/seed/product-28/300/300",
+    "price": 54.99,
+    "description": "Ergonomic wireless controller compatible with PC and consoles for comfortable, precise gaming.",
+    "details": [
+      "Wireless Bluetooth connectivity",
+      "Compatible with PC and consoles",
+      "Rechargeable battery",
+      "Ergonomic grip design"
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Graphics Tablet",
+    "image": "https://picsum.photos/seed/product-29/300/300",
+    "price": 89,
+    "description": "Digital drawing tablet with pressure-sensitive pen input, ideal for artists and designers.",
+    "details": [
+      "8192 levels of pen pressure",
+      "Battery-free stylus included",
+      "Compatible with major design software",
+      "USB-C connectivity"
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Portable Projector",
+    "image": "https://picsum.photos/seed/product-30/300/300",
+    "price": 189.99,
+    "description": "Turn any wall into a big screen with this compact, easy-to-carry portable projector.",
+    "details": [
+      "Native 1080p support",
+      "Built-in speaker",
+      "HDMI and USB inputs",
+      "Compact, lightweight body"
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Smart Light Bulb",
+    "image": "https://picsum.photos/seed/product-31/300/300",
+    "price": 14.99,
+    "description": "Wi-Fi enabled smart bulb with millions of colors, controllable from your phone or voice assistant.",
+    "details": [
+      "16 million colors",
+      "Voice assistant compatible",
+      "Scheduling and scenes via app",
+      "No hub required"
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Fitness Tracker Band",
+    "image": "https://picsum.photos/seed/product-32/300/300",
+    "price": 49.99,
+    "description": "Lightweight fitness band that tracks steps, sleep, and heart rate around the clock.",
+    "details": [
+      "24/7 heart rate monitoring",
+      "Sleep tracking",
+      "Water resistant",
+      "Up to 7 days battery life"
+    ]
+  },
+  {
+    "id": 33,
+    "name": "True Wireless Earphones",
+    "image": "https://picsum.photos/seed/product-33/300/300",
+    "price": 79.99,
+    "description": "Compact true wireless earphones offering clear sound and a secure, comfortable fit.",
+    "details": [
+      "True wireless design",
+      "Up to 5 hours playtime (20 with case)",
+      "Touch controls",
+      "Sweat resistant"
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Desktop PC Tower",
+    "image": "https://picsum.photos/seed/product-34/300/300",
+    "price": 999,
+    "description": "A powerful desktop tower built for gaming, content creation, and multitasking.",
+    "details": [
+      "16GB RAM, 1TB SSD",
+      "Dedicated graphics card",
+      "Multiple USB and display ports",
+      "Compact tower design"
+    ]
+  },
+  {
+    "id": 35,
+    "name": "All-in-One PC",
+    "image": "https://picsum.photos/seed/product-35/300/300",
+    "price": 1099,
+    "description": "Sleek all-in-one PC that combines a stunning display and full computer into one clean design.",
+    "details": [
+      "23.8-inch Full HD display",
+      "16GB RAM, 512GB SSD",
+      "Built-in webcam and speakers",
+      "Wireless keyboard and mouse included"
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Wi-Fi Range Extender",
+    "image": "https://picsum.photos/seed/product-36/300/300",
+    "price": 39.99,
+    "description": "Eliminate dead zones and extend your Wi-Fi coverage to every corner of your home.",
+    "details": [
+      "Dual-band Wi-Fi extension",
+      "Simple plug-in setup",
+      "Compatible with any router",
+      "Ethernet port included"
+    ]
+  },
+  {
+    "id": 37,
+    "name": "Bluetooth Car Speaker",
+    "image": "https://picsum.photos/seed/product-37/300/300",
+    "price": 44.99,
+    "description": "Clip-on Bluetooth speaker with hands-free calling, perfect for your car's sun visor.",
+    "details": [
+      "Bluetooth 5.0 connectivity",
+      "Hands-free calling with noise reduction",
+      "Up to 12 hours talk time",
+      "Visor clip mount"
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Electric Shaver",
+    "image": "https://picsum.photos/seed/product-38/300/300",
+    "price": 59.99,
+    "description": "Cordless rotary electric shaver for a smooth, comfortable shave with minimal irritation.",
+    "details": [
+      "Wet and dry use",
+      "Rechargeable battery",
+      "Self-sharpening blades",
+      "Pop-up trimmer"
+    ]
+  },
+  {
+    "id": 39,
+    "name": "Cordless Hair Dryer",
+    "image": "https://picsum.photos/seed/product-39/300/300",
+    "price": 49.99,
+    "description": "Lightweight, powerful hair dryer with multiple heat settings for fast, gentle drying.",
+    "details": [
+      "1800W motor",
+      "3 heat and 2 speed settings",
+      "Cool shot button",
+      "Removable filter cap"
+    ]
+  },
+  {
+    "id": 40,
+    "name": "Smart Thermostat",
+    "image": "https://picsum.photos/seed/product-40/300/300",
+    "price": 129.99,
+    "description": "Save energy and stay comfortable with this Wi-Fi enabled smart thermostat.",
+    "details": [
+      "Wi-Fi and app control",
+      "Learns your schedule automatically",
+      "Energy usage reports",
+      "Voice assistant compatible"
+    ]
+  },
+  {
+    "id": 41,
+    "name": "Portable Bluetooth Printer",
+    "image": "https://picsum.photos/seed/product-41/300/300",
+    "price": 99.99,
+    "description": "Compact wireless printer for photos and documents, ready to print anywhere.",
+    "details": [
+      "Bluetooth and Wi-Fi connectivity",
+      "Compact, battery-powered design",
+      "Mobile app printing",
+      "Supports photo and document printing"
+    ]
+  },
+  {
+    "id": 42,
+    "name": "Digital Photo Frame",
+    "image": "https://picsum.photos/seed/product-42/300/300",
+    "price": 69.99,
+    "description": "Display your favorite memories in a rotating slideshow on this crisp digital photo frame.",
+    "details": [
+      "10.1-inch HD display",
+      "Wi-Fi photo sharing via app",
+      "Built-in storage",
+      "Wall-mountable or stand design"
+    ]
+  },
+  {
+    "id": 43,
+    "name": "Smart Plug",
+    "image": "https://picsum.photos/seed/product-43/300/300",
+    "price": 12.99,
+    "description": "Turn any outlet into a smart outlet with app and voice-controlled scheduling.",
+    "details": [
+      "Wi-Fi enabled, no hub required",
+      "Voice assistant compatible",
+      "Scheduling and timers",
+      "Energy monitoring"
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Portable SSD Enclosure",
+    "image": "https://picsum.photos/seed/product-44/300/300",
+    "price": 24.99,
+    "description": "Turn any M.2 or 2.5-inch drive into a fast portable storage device with this enclosure.",
+    "details": [
+      "USB 3.1 Gen 2 interface",
+      "Tool-free installation",
+      "Aluminum heat-dissipating shell",
+      "Supports drives up to 4TB"
+    ]
+  },
+  {
+    "id": 45,
+    "name": "Wireless Presenter Remote",
+    "image": "https://picsum.photos/seed/product-45/300/300",
+    "price": 19.99,
+    "description": "Control your slideshow from across the room with this compact wireless presenter.",
+    "details": [
+      "2.4GHz wireless range up to 30m",
+      "Laser pointer included",
+      "Plug-and-play USB receiver",
+      "Long battery life"
+    ]
+  },
+  {
+    "id": 46,
+    "name": "Bluetooth Headband Headphones",
+    "image": "https://picsum.photos/seed/product-46/300/300",
+    "price": 29.99,
+    "description": "Sleep-friendly Bluetooth headband with built-in speakers for music without earbuds.",
+    "details": [
+      "Ultra-thin built-in speakers",
+      "Washable, comfortable fabric",
+      "Bluetooth 5.0 connectivity",
+      "Up to 10 hours playtime"
+    ]
+  },
+  {
+    "id": 47,
+    "name": "USB Condenser Microphone",
+    "image": "https://picsum.photos/seed/product-47/300/300",
+    "price": 79.99,
+    "description": "Studio-quality USB condenser microphone ideal for streaming, podcasting, and recording.",
+    "details": [
+      "Cardioid pickup pattern",
+      "Plug-and-play USB connectivity",
+      "Built-in headphone monitoring",
+      "Adjustable desktop stand included"
+    ]
+  },
+  {
+    "id": 48,
+    "name": "Full HD Webcam",
+    "image": "https://picsum.photos/seed/product-48/300/300",
+    "price": 49.99,
+    "description": "Crisp 1080p webcam with a built-in microphone, perfect for video calls and streaming.",
+    "details": [
+      "1080p Full HD video",
+      "Built-in noise-reducing microphone",
+      "Auto light correction",
+      "Universal clip mount"
+    ]
+  },
+  {
+    "id": 49,
+    "name": "Laptop Cooling Pad",
+    "image": "https://picsum.photos/seed/product-49/300/300",
+    "price": 24.99,
+    "description": "Keep your laptop running cool with this quiet, ergonomic dual-fan cooling pad.",
+    "details": [
+      "Dual quiet cooling fans",
+      "Adjustable height positions",
+      "USB passthrough port",
+      "Fits laptops up to 17 inches"
+    ]
+  },
+  {
+    "id": 50,
+    "name": "Smart Body Scale",
+    "image": "https://picsum.photos/seed/product-50/300/300",
+    "price": 34.99,
+    "description": "Track your health metrics with this smart scale that syncs directly to your phone.",
+    "details": [
+      "Measures weight, BMI, and body fat",
+      "Syncs via Bluetooth app",
+      "Supports multiple user profiles",
+      "Tempered glass platform"
+    ]
+  }
+]

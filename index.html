@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Electronic Products</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="top-bar">
+    <a class="my-orders-link" href="orders.html">My Orders</a>
+  </div>
+
+  <h1>Electronic Products</h1>
+
+  <div class="filters">
+    <label for="name-filter" class="visually-hidden">Name</label>
+    <input type="text" id="name-filter" placeholder="Search by name..." />
+    <label for="min-price-filter" class="visually-hidden">Min price</label>
+    <input type="number" id="min-price-filter" placeholder="Min price" min="0" />
+    <label for="max-price-filter" class="visually-hidden">Max price</label>
+    <input type="number" id="max-price-filter" placeholder="Max price" min="0" />
+  </div>
+
+  <div class="grid" id="product-grid"></div>
+
+  <div class="pagination" id="pagination">
+    <button id="prev-page">Previous</button>
+    <span id="page-info"></span>
+    <button id="next-page">Next</button>
+  </div>
+
+  <script type="module">
+    const PAGE_SIZE = 10;
+
+    let allProducts = [];
+    let filteredProducts = [];
+    let currentPage = 1;
+
+    const nameFilter = document.getElementById('name-filter');
+    const minPriceFilter = document.getElementById('min-price-filter');
+    const maxPriceFilter = document.getElementById('max-price-filter');
+    const grid = document.getElementById('product-grid');
+    const pagination = document.getElementById('pagination');
+    const pageInfo = document.getElementById('page-info');
+    const prevPageBtn = document.getElementById('prev-page');
+    const nextPageBtn = document.getElementById('next-page');
+
+    function renderPage() {
+      const totalPages = Math.max(1, Math.ceil(filteredProducts.length / PAGE_SIZE));
+      currentPage = Math.min(currentPage, totalPages);
+
+      if (filteredProducts.length === 0) {
+        grid.innerHTML = '<p class="empty">No products match your filters.</p>';
+        pagination.style.display = 'none';
+        return;
+      }
+
+      pagination.style.display = 'flex';
+      const start = (currentPage - 1) * PAGE_SIZE;
+      const pageItems = filteredProducts.slice(start, start + PAGE_SIZE);
+
+      grid.innerHTML = pageItems.map(p => `
+        <a class="card" href="product.html?id=${p.id}">
+          <img src="${p.image}" alt="${p.name}" />
+          <h3>${p.name}</h3>
+          <p class="price">$${p.price.toFixed(2)}</p>
+        </a>
+      `).join('');
+
+      pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+      prevPageBtn.disabled = currentPage <= 1;
+      nextPageBtn.disabled = currentPage >= totalPages;
+    }
+
+    function applyFilters() {
+      const nameQuery = nameFilter.value.trim().toLowerCase();
+      const minPrice = minPriceFilter.value !== '' ? Number.parseFloat(minPriceFilter.value) : null;
+      const maxPrice = maxPriceFilter.value !== '' ? Number.parseFloat(maxPriceFilter.value) : null;
+
+      filteredProducts = allProducts.filter(p => {
+        const matchesName = !nameQuery || p.name.toLowerCase().includes(nameQuery);
+        const matchesMin = minPrice === null || p.price >= minPrice;
+        const matchesMax = maxPrice === null || p.price <= maxPrice;
+        return matchesName && matchesMin && matchesMax;
+      });
+
+      currentPage = 1;
+      renderPage();
+    }
+
+    [nameFilter, minPriceFilter, maxPriceFilter].forEach(input => {
+      input.addEventListener('input', applyFilters);
+    });
+
+    prevPageBtn.addEventListener('click', () => {
+      currentPage -= 1;
+      renderPage();
+    });
+
+    nextPageBtn.addEventListener('click', () => {
+      currentPage += 1;
+      renderPage();
+    });
+
+    try {
+      const res = await fetch('products.json');
+      allProducts = await res.json();
+      filteredProducts = allProducts;
+      renderPage();
+    } catch (err) {
+      grid.innerHTML = '<p class="empty">Failed to load products.</p>';
+      pagination.style.display = 'none';
+      console.error(err);
+    }
+  </script>
+</body>
+</html>

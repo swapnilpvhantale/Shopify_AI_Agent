@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Product Details</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a href="index.html" class="back-link">&larr; Back to all products</a>
+
+  <div id="product-container"></div>
+
+  <script type="module">
+    import { addOrder } from './orders-storage.js';
+
+    const params = new URLSearchParams(window.location.search);
+    const productId = Number.parseInt(params.get('id'), 10);
+    const container = document.getElementById('product-container');
+
+    function renderProduct(product) {
+      container.innerHTML = `
+        <div class="product-page">
+          <div class="product-image">
+            <img src="${product.image}" alt="${product.name}" />
+          </div>
+          <div class="product-info">
+            <h1>${product.name}</h1>
+            <hr />
+            <div class="price-row">
+              <p class="product-price"><span class="currency">$</span>${product.price.toFixed(2)}</p>
+              <button class="checkout-btn" id="checkout-btn">Checkout</button>
+            </div>
+            <p class="product-description">${product.description}</p>
+            <hr />
+            <div class="product-details">
+              <h2>Product Details</h2>
+              <ul>
+                ${product.details.map(d => `<li>${d}</li>`).join('')}
+              </ul>
+            </div>
+          </div>
+        </div>
+      `;
+
+      document.getElementById('checkout-btn').addEventListener('click', () => {
+        addOrder(product);
+        window.location.href = `order.html?id=${product.id}`;
+      });
+    }
+
+    try {
+      const res = await fetch('products.json');
+      const products = await res.json();
+      const product = products.find(p => p.id === productId);
+
+      if (!product) {
+        container.innerHTML = '<p class="empty">Product not found.</p>';
+      } else {
+        renderProduct(product);
+      }
+    } catch (err) {
+      container.innerHTML = '<p class="empty">Failed to load product.</p>';
+      console.error(err);
+    }
+  </script>
+</body>
+</html>

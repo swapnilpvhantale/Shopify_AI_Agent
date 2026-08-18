@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Orders</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .back-link { display: block; text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>My Orders</h1>
+  <a href="index.html" class="back-link">&larr; Back to all products</a>
+
+  <div class="grid" id="orders-grid"></div>
+
+  <script type="module">
+    import { getOrders } from './orders-storage.js';
+
+    const grid = document.getElementById('orders-grid');
+    const orders = getOrders();
+
+    if (orders.length === 0) {
+      grid.innerHTML = '<p class="empty">You have not purchased any products yet.</p>';
+    } else {
+      grid.innerHTML = orders.map(o => `
+        <div class="card">
+          <img src="${o.image}" alt="${o.name}" />
+          <h3>${o.name}</h3>
+          <p class="price">$${o.price.toFixed(2)}</p>
+          <p class="purchased-at">Purchased on ${new Date(o.purchasedAt).toLocaleString()}</p>
+        </div>
+      `).join('');
+    }
+  </script>
+</body>
+</html>
