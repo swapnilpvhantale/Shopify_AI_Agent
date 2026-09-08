@@ -1,0 +1,15 @@
+{
+  "name": "shopify-claude-agent",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/claude-agent-sdk": "^0.3.263",
+    "dotenv": "^17.4.2",
+    "zod": "^4.0.0"
+  }
+}
