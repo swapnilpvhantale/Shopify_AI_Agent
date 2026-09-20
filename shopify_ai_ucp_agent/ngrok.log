@@ -1,0 +1,29 @@
+t=2026-09-20T11:06:40+0530 lvl=info msg="no configuration paths supplied"
+t=2026-09-20T11:06:40+0530 lvl=info msg="using configuration at default config path" path=C:\Users\Asus_User.LAPTOP-0UIAUK8A\AppData\Local\ngrok\ngrok.yml
+t=2026-09-20T11:06:40+0530 lvl=info msg="open config file" path=C:\Users\Asus_User.LAPTOP-0UIAUK8A\AppData\Local\ngrok\ngrok.yml err=<nil>
+t=2026-09-20T11:06:40+0530 lvl=info msg="FIPS 140 mode" enabled=false
+t=2026-09-20T11:06:40+0530 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+t=2026-09-20T11:06:41+0530 lvl=info msg="client session established" obj=tunnels.session
+t=2026-09-20T11:06:41+0530 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2026-09-20T11:06:42+0530 lvl=info msg="started tunnel" obj=tunnels name=command_line addr=http://localhost:3400 url=https://e38b-49-36-33-239.ngrok-free.app
+t=2026-09-20T11:09:12+0530 lvl=info msg="join connections" obj=join id=0298ac4c56b9 l=[::1]:3400 r=136.119.131.104:40308
+t=2026-09-20T11:11:48+0530 lvl=info msg=start pg=/api/tunnels id=b3a60222871ad026
+t=2026-09-20T11:11:48+0530 lvl=info msg=end pg=/api/tunnels id=b3a60222871ad026 status=200 dur=1.2611ms
+t=2026-09-20T11:18:06+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session clientid=d8f7c0207e26f87318b2d6bf5d885151 obj=csess id=745d9c126039
+t=2026-09-20T11:18:06+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session obj=csess id=f5b1979ba088 err="session closed"
+t=2026-09-20T11:18:07+0530 lvl=info msg="client session established" obj=tunnels.session
+t=2026-09-20T11:18:07+0530 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2026-09-20T11:19:19+0530 lvl=info msg="join connections" obj=join id=29fb3614bf16 l=[::1]:3400 r=35.222.105.28:35665
+t=2026-09-20T12:06:58+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=328d257f565a clientid=d8f7c0207e26f87318b2d6bf5d885151
+t=2026-09-20T12:06:58+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session obj=csess id=f5b1979ba088 err="session closed"
+t=2026-09-20T12:07:05+0530 lvl=info msg="client session established" obj=tunnels.session
+t=2026-09-20T12:07:05+0530 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2026-09-21T04:32:21+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=e9f8789d5403 clientid=d8f7c0207e26f87318b2d6bf5d885151
+t=2026-09-21T04:32:21+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session obj=csess id=f5b1979ba088 err="session closed"
+t=2026-09-21T04:32:25+0530 lvl=info msg="client session established" obj=tunnels.session
+t=2026-09-21T04:32:25+0530 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2026-09-21T04:32:26+0530 lvl=warn msg="failed to check for update" obj=updater err="Post \"https://update.ngrok-agent.com/check\": context deadline exceeded"
+t=2026-09-21T04:32:37+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session obj=csess id=f5b1979ba088 err="read tcp [2409:4090:20be:3a03:cc8c:2ae8:9c7c:c7dd]:56252->[2406:da1a:e91:9302:6bbc:cc3d:8e60:4a99]:443: wsarecv: An established connection was aborted by the software in your host machine."
+t=2026-09-21T04:32:38+0530 lvl=info msg="client session established" obj=tunnels.session
+t=2026-09-21T04:32:38+0530 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2026-09-21T04:32:49+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session clientid=d8f7c0207e26f87318b2d6bf5d885151 obj=csess id=bc31b3c609cd

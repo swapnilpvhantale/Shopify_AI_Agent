@@ -1,0 +1,5 @@
+
+> shopify-ai-ucp-agent@1.0.0 start
+> node server.js
+
+Shopify chatbot server listening on http://localhost:3400
