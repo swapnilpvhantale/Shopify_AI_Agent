@@ -13,11 +13,16 @@ const PORT = process.env.PORT || 3400;
 
 // The frontend is also opened directly from VS Code's Live Server (port
 // 5500) instead of this server's own static hosting, which makes it a
-// cross-origin request. Allow just that known local dev origin (plus this
-// server's own origin, which never needs CORS in the first place).
+// cross-origin request. Allow that known local dev origin, plus any
+// production origin(s) that embed this app (e.g. a storefront domain
+// hosting an iframe/widget that calls this API cross-origin) — this
+// server's own origin never needs CORS in the first place.
 const ALLOWED_ORIGINS = [
   "http://localhost:5500",
   "http://127.0.0.1:5500",
+  ...(process.env.EXTRA_ALLOWED_ORIGINS
+    ? process.env.EXTRA_ALLOWED_ORIGINS.split(",").map((origin) => origin.trim())
+    : []),
 ];
 
 // One chat session per browser tab (keyed by the client-generated sessionId),

@@ -1,11 +1,14 @@
-const BACKEND_PORT = 3400;
-// When opened straight from this server (http://localhost:3400), relative
-// URLs already resolve correctly. When opened from a separate static server
-// (e.g. VS Code's Live Server on :5500), point at the backend explicitly.
+const LIVE_SERVER_DEV_PORT = "5500";
+const BACKEND_DEV_PORT = 3400;
+// Relative URLs resolve correctly whenever this page is served by the same
+// Express server that hosts the API (local prod-style run, or deployed
+// hosting like Render, where the page and API share one origin). The only
+// exception is the VS Code Live Server dev workflow (page on :5500), which
+// needs to be pointed at the backend explicitly.
 const API_BASE =
-  window.location.port === String(BACKEND_PORT)
-    ? ""
-    : `${window.location.protocol}//${window.location.hostname}:${BACKEND_PORT}`;
+  window.location.port === LIVE_SERVER_DEV_PORT
+    ? `${window.location.protocol}//${window.location.hostname}:${BACKEND_DEV_PORT}`
+    : "";
 
 const SESSION_KEY = "shopify-chat-session-id";
 
