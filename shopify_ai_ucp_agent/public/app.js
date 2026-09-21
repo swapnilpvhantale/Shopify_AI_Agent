@@ -21,6 +21,26 @@ function getSessionId() {
   return id;
 }
 
+// On Render's free tier, a sleeping instance can take 30-60s to wake up,
+// and during that window the platform may serve an HTML interstitial page
+// instead of proxying to this app — which breaks a plain res.json() call.
+// Retry once after a short wait before giving up with a friendly message.
+async function apiRequest(path, options = {}, attempt = 0) {
+  const res = await fetch(`${API_BASE}${path}`, options);
+  let data;
+  try {
+    data = await res.json();
+  } catch {
+    if (attempt === 0) {
+      await new Promise((resolve) => setTimeout(resolve, 4000));
+      return apiRequest(path, options, attempt + 1);
+    }
+    throw new Error("The assistant is still waking up — please try again in a moment.");
+  }
+  if (!res.ok) throw new Error(data.error || "Something went wrong.");
+  return data;
+}
+
 const sessionId = getSessionId();
 const messagesEl = document.getElementById("messages");
 const chatEl = document.getElementById("chat");
@@ -131,13 +151,11 @@ loginFormEl.addEventListener("submit", async (event) => {
   submitBtn.disabled = true;
 
   try {
-    const res = await fetch(`${API_BASE}/api/auth/login`, {
+    const data = await apiRequest("/api/auth/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ sessionId, email, password }),
     });
-    const data = await res.json();
-    if (!res.ok) throw new Error(data.error || "Could not log in.");
 
     currentAccount = data.customer;
     renderAccountStatus();
@@ -163,13 +181,11 @@ signupFormEl.addEventListener("submit", async (event) => {
   submitBtn.disabled = true;
 
   try {
-    const res = await fetch(`${API_BASE}/api/auth/signup`, {
+    const data = await apiRequest("/api/auth/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ sessionId, email, password, firstName, lastName }),
     });
-    const data = await res.json();
-    if (!res.ok) throw new Error(data.error || "Could not create an account.");
 
     currentAccount = data.customer;
     renderAccountStatus();
@@ -209,13 +225,11 @@ function addTypingBubble() {
 }
 
 async function addToCartRequest(variantId, quantity) {
-  const res = await fetch(`${API_BASE}/api/cart/add`, {
+  const data = await apiRequest("/api/cart/add", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ sessionId, variantId, quantity }),
   });
-  const data = await res.json();
-  if (!res.ok) throw new Error(data.error || "Could not add that item to the cart.");
   return data.cart;
 }
 
@@ -362,20 +376,13 @@ async function sendMessage(text) {
   const thinking = addTypingBubble();
 
   try {
-    const res = await fetch(`${API_BASE}/api/chat`, {
+    const data = await apiRequest("/api/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ sessionId, message: text }),
     });
 
-    const data = await res.json();
-
     thinking.remove();
-
-    if (!res.ok) {
-      addBubble(data.error || "Something went wrong.", "error");
-      return;
-    }
 
     addBubble(data.reply || "(no response)", "assistant");
     renderProductCards(data.products);
@@ -391,7 +398,7 @@ async function sendMessage(text) {
     }
   } catch (err) {
     thinking.remove();
-    addBubble("Network error — is the server running?", "error");
+    addBubble(err.message || "Network error — is the server running?", "error");
   } finally {
     inputEl.disabled = false;
     composerEl.querySelector("button").disabled = false;
