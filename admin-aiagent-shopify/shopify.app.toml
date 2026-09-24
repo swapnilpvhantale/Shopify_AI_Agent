@@ -2,7 +2,7 @@
 
 client_id = "14574847988661ec1bca90012904cd7c"
 name = "aiagent_admin"
-application_url = "https://example.com"
+application_url = "https://shopify-admin-tmy5.onrender.com"
 embedded = true
 
 [access_scopes]
