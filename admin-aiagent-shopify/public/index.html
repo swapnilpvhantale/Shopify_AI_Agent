@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shopify Admin Agent</title>
+  <!-- Required for Shopify to load this page inside the admin's iframe -
+       handles the top-level redirect / embedding handshake automatically.
+       data-api-key must match this app's Client ID (shopify.app.toml). -->
+  <script src="https://cdn.shopify.com/shopifycloud/app-bridge.js" data-api-key="14574847988661ec1bca90012904cd7c"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <div>
+        <h1>Shopify Admin Agent</h1>
+        <p>Manage inventory, orders, products, and customers by chatting with the store's admin assistant.</p>
+      </div>
+      <div class="role-badge" id="role-badge" hidden></div>
+    </header>
+
+    <main class="layout">
+      <section class="chat" id="chat">
+        <div class="messages" id="messages"></div>
+      </section>
+
+      <aside class="activity-panel">
+        <h2>Recent actions</h2>
+        <div class="activity-empty" id="activity-empty">No admin actions yet this session.</div>
+        <ul class="activity-list" id="activity-list"></ul>
+      </aside>
+    </main>
+
+    <form class="composer" id="composer">
+      <input
+        type="text"
+        id="input"
+        placeholder="e.g. Set Blue T-Shirt (M) stock at Main Warehouse to 40"
+        autocomplete="off"
+      />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <div class="modal-backdrop" id="role-modal-backdrop">
+    <div class="modal">
+      <h2>Sign in to the admin console</h2>
+      <p>Select your role to start a session. Write actions (inventory changes, order updates, product edits) always require your explicit yes/no confirmation in chat.</p>
+      <div class="role-choices">
+        <button type="button" class="role-choice-btn" data-role="admin">
+          <strong>Admin</strong>
+          <span>Full access to all admin operations</span>
+        </button>
+        <button type="button" class="role-choice-btn" data-role="staff">
+          <strong>Staff</strong>
+          <span>Same tools, logged as staff</span>
+        </button>
+      </div>
+      <p class="modal-error" id="role-modal-error" hidden></p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

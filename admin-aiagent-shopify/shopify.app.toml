@@ -1,0 +1,24 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "14574847988661ec1bca90012904cd7c"
+name = "aiagent_admin"
+application_url = "https://example.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+# Matches what every tool in src/tools/ needs: reads for list_products,
+# get_product, list_locations, list_orders, get_order, list_customers; writes
+# for update_inventory, update_order_status, fulfill_order, update_product.
+# fulfill_order additionally needs the merchant-managed fulfillment-order
+# scopes: Order.fulfillmentOrders and fulfillmentCreateV2 aren't covered by
+# write_orders alone.
+scopes = "read_products,write_products,read_inventory,write_inventory,read_orders,write_orders,read_locations,read_customers,read_merchant_managed_fulfillment_orders,write_merchant_managed_fulfillment_orders"
+optional_scopes = [ ]
+use_legacy_install_flow = false
+
+[auth]
+redirect_urls = [ ]
+
+[webhooks]
+api_version = "2026-07"

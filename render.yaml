@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: shopify-admin-agent
+    runtime: node
+    rootDir: admin-aiagent-shopify
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: SHOPIFY_STORE_DOMAIN
+        sync: false
+      - key: SHOPIFY_CLIENT_ID
+        sync: false
+      - key: SHOPIFY_CLIENT_SECRET
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
