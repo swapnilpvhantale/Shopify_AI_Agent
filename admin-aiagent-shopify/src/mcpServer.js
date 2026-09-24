@@ -7,6 +7,7 @@ import { listOrdersTool } from "./tools/listOrders.js";
 import { getOrderTool } from "./tools/getOrder.js";
 import { createUpdateOrderStatusTool } from "./tools/updateOrderStatus.js";
 import { createFulfillOrderTool } from "./tools/fulfillOrder.js";
+import { createUpdateFulfillmentStatusTool } from "./tools/updateFulfillmentStatus.js";
 import { createUpdateProductTool } from "./tools/updateProduct.js";
 import { listCustomersTool } from "./tools/listCustomers.js";
 
@@ -21,6 +22,7 @@ const TOOL_NAMES = [
   "get_order",
   "update_order_status",
   "fulfill_order",
+  "update_fulfillment_status",
   "update_product",
   "list_customers",
 ];
@@ -44,6 +46,7 @@ export function createAdminMcpServer(sessionState) {
       getOrderTool,
       createUpdateOrderStatusTool(sessionState),
       createFulfillOrderTool(sessionState),
+      createUpdateFulfillmentStatusTool(sessionState),
       createUpdateProductTool(sessionState),
       listCustomersTool,
     ],

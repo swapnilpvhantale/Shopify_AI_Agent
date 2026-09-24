@@ -130,6 +130,7 @@ export async function getOrderDetail(orderId) {
           }
         }
         fulfillments(first: 10) {
+          id
           status
           trackingInfo { number company url }
         }
